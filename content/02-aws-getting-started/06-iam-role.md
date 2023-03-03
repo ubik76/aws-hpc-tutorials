@@ -1,7 +1,7 @@
 +++
-title = "c. Post Event: Temporary credentials on Cloud9 (Skip)"
+title = "d. Temporary credentials on Cloud9"
 date = 2019-09-18T10:46:30-04:00
-weight = 70
+weight = 90
 tags = ["tutorial", "install", "IAM"]
 +++
 

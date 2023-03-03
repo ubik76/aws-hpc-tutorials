@@ -1,10 +1,10 @@
 +++
-title = "c. Work with the AWS CLI"
-weight = 70
+title = "d. Work with the AWS CLI"
+weight = 80
 tags = ["tutorial", "cloud9", "aws cli", "s3"]
 +++
 
-Your AWS Cloud9 Environment should be ready. Now, you can become familiar with the environment, learn about the AWS CLI, and then create an Amazon S3 bucket with the AWS CLI. This S3 bucket is used in the next module. 
+Your AWS Cloud9 Environment should be ready. Now, you can become familiar with the environment and learn about the AWS CLI. 
 
 #### AWS Cloud9 IDE Layout
 
@@ -43,7 +43,7 @@ sudo pip uninstall -y awscli
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
-. ~/.bash_profile
+source ~/.bash_profile
 ```
 
 3. Verify you have AWS CLI 2.x
@@ -52,8 +52,31 @@ sudo ./aws/install
 aws --version
 ```
 
-4. Install jq utility ( you will need this utility to work with JSON files in the labs that follow )
+4. Install jq utility (you will need this utility to work with JSON files in the labs that follow)
 
 ```bash
-sudo yum install -y jq 
+sudo yum install -y jq
+```
+
+5. Install yq utility (you will need this utiity to work with the cluster configuration file, as it is in YAML format)
+
+```bash
+VERSION=v4.28.1
+BINARY=yq_linux_amd64
+mkdir -p $HOME/.local/bin
+wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY} -O $HOME/.local/bin/yq && chmod +x $HOME/.local/bin/yq
+```
+
+6. Identify the AWS region with the following commands in the Cloud9 terminal:
+
+```bash
+export AWS_REGION=$(curl --silent http://169.254.169.254/latest/meta-data/placement/region)
+echo $AWS_REGION
+```
+
+6. Configure the AWS CLI to use this AWS region:
+
+```bash
+aws configure set default.region ${AWS_REGION}
+aws configure get default.region
 ```

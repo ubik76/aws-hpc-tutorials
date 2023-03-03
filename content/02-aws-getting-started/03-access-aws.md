@@ -1,5 +1,5 @@
 ---
-title: "a. Event: Accessing Your Lab Account"
+title: "a. Accessing Your Lab Account"
 date: 2019-09-18T10:50:17-04:00
 draft: false
 weight: 50
@@ -9,12 +9,11 @@ weight: 50
 Accounts are only accessible for the duration of the event. To continue using AWS after the event, [create an AWS Account](<https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/>).
 {{% /notice %}}
 
-Do not hesitate to ask questions at {{% param contact %}} if you need any help.
 
 ##### Step 1
 
 {{% notice warning %}}
-Sandboxes were available on {{< param tutorialDate >}} for the duration of the tutorial. If you would like to run through the labs at a later stage on your own, with your company or institution, please contact us at {{% param contact %}} so we can follow-up with you.
+Sandboxes are available for the duration of the workshop. If you would like to run through the labs at a later stage on your own, with your company or institution, please contact you AWS account manager so we can follow-up with you.
 {{% /notice %}}
 
 ##### Step 2
@@ -38,5 +37,5 @@ Click **AWS Console Login**, then on the following popup click on the link **Ope
 ![Event Engine AWS Console](</images/sc22/event-engine-aws-console.png>)
 
 {{% notice warning %}}
-Do not forget to run in the US east 1 AWS Region (us-east-1). We can connect into your account if you need help during the tutorial.
+Do not forget to run in the EU west 1 AWS Region (eu-west-1). We can connect into your account if you need help during the tutorial.
 {{% /notice %}}

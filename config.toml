@@ -45,27 +45,8 @@ page = [ "HTML", "AMP"]
     privacyEnhanced = false
 
 [[menu.shortcuts]]
-name = "<i class='fab fa-github'></i> Github"
-url = "https://github.com/aws-samples/aws-hpc-tutorials"
-weight = 10
-
-[[menu.shortcuts]]
 name = "<i class='fas fa-bookmark'></i> AWS - HPC"
 url = "https://aws.amazon.com/hpc/"
 weight = 10
 
-[[menu.shortcuts]]
-name = "<i class='fas fa-users'></i> Authors"
-url = "/authors.html"
-weight = 20
 
-[[menu.shortcuts]]
-name = "<i class='fas fa-envelope'></i> Feedback / Questions?"
-url = "mailto:aws-hpc-workshops@amazon.com"
-weight = 30
-
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-tags'></i> Tags"
-url = "/tags"
-weight = 40

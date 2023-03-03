@@ -1,5 +1,5 @@
 +++
-title = "b. Post Event: Access AWS (Skip)"
+title = "b. Your AWS account (optional)"
 date = 2019-09-18T10:46:30-04:00
 draft = false
 weight = 60
@@ -7,7 +7,7 @@ tags = ["tutorial", "aws console", "ec2"]
 +++
 
 {{% notice warning %}}
-Skip this step if you are doing the labs during the SC22 event.
+Skip this step if you are doing the labs during an AWS event.
 {{% /notice %}}
 
 
@@ -25,6 +25,6 @@ After you sign in, take a few minutes to explore the navigation components of th
 
 Start this workshop by selecting an **AWS Region**:
 
-Choose the **Region** drop-down menu, then choose **US East (N. Virginia)** us-east-1.
+Choose the **Region** drop-down menu, then choose **EU West (Irelans)** eu-west-1.
 
 ![AWS Management Console](/images/hpc-aws-parallelcluster-workshop/aws-console.png)
