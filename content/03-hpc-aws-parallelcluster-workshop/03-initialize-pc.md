@@ -19,36 +19,73 @@ Your HPC cluster configuration will need network information such as VPC ID, Sub
 To ease the setup, you will use a script for settings of those parameters.
 If you have time and are curious, you can examine the different steps of the script.
 
-#### 1. Retrieve the script.
+#### Generate a new key-pair
 ```bash
-curl -O https://raw.githubusercontent.com/aws-samples/awsome-hpc/main/apps/wrf/scripts/setup/SC22_create_parallelcluster_config.sh
+aws ec2 create-key-pair --key-name pc-intro-key --query KeyMaterial --output text > ~/.ssh/pc-intro-key
 ```
 
-#### 2. Execute the script to retrieve network information.
 ```bash
-source ./SC22_create_parallelcluster_config.sh
+chmod 600 ~/.ssh/pc-intro-key
 ```
 
-#### 3. Store the SSH key in AWS Secrets Manager as a failsafe in the event that the private SSH key is lost.
+#### Getting your AWS networking information
 ```bash
-b64key=$(base64 ~/.ssh/${SSH_KEY_NAME})
-aws secretsmanager create-secret --name ${SSH_KEY_NAME} \
-    --description "Private key file" \
-    --secret-string "$b64key" \
-    --region ${AWS_REGION}
+export IFACE=$(curl --silent http://169.254.169.254/latest/meta-data/network/interfaces/macs/)
+export SUBNET_ID=$(curl --silent http://169.254.169.254/latest/meta-data/network/interfaces/macs/${IFACE}/subnet-id)
+export VPC_ID=$(curl --silent http://169.254.169.254/latest/meta-data/network/interfaces/macs/${IFACE}/vpc-id)
+export REGION=$(curl --silent http://169.254.169.254/latest/meta-data/placement/availability-zone | sed 's/[a-z]$//')
 ```
 
-Next, you build a configuration to generate a cluster to run  HPC applications.
+#### Build the Cluster configuration file
 
-{{% notice info %}}
-**Optional Step**: Please run this command **ONLY** in the event that you lose your SSH private key and need to retrieve it from the secrets manager
+Next, you build a configuration to generate an optimized cluster to run typical “tightly coupled” HPC applications.
 
 ```bash
-aws secretsmanager get-secret-value --secret-id ${SSH_KEY_NAME} \
-    --query 'SecretString' \
-    --region ${AWS_REGION} \
-    --output text | base64 --decode > ~/.ssh/${SSH_KEY_NAME}
-
-chmod 400 ~/.ssh/${SSH_KEY_NAME}
+cat > my-cluster-config.yaml << EOF
+HeadNode:
+  InstanceType: t2.micro
+  Networking:
+    SubnetId: ${SUBNET_ID}
+  Ssh:
+    KeyName: pc-intro-key
+  LocalStorage:
+    RootVolume:
+      VolumeType: gp3
+      Size: 50
+      Encrypted: true
+Scheduling:
+  Scheduler: slurm
+  SlurmQueues:
+    - Name: queue0
+      AllocationStrategy: lowest-price
+      ComputeResources:
+        - Name: queue0-compute-resource-0
+          Instances:
+            - InstanceType: c5n.large
+          MinCount: 0
+          MaxCount: 2
+          DisableSimultaneousMultithreading: true
+      Networking:
+        SubnetIds:
+          - ${SUBNET_ID}
+        PlacementGroup:
+          Enabled: true
+      ComputeSettings:
+        LocalStorage:
+          RootVolume:
+            VolumeType: gp3
+  SlurmSettings: {}
+Region: eu-west-1
+Image:
+  Os: alinux2
+SharedStorage:
+  - Name: FsxLustre0
+    StorageType: FsxLustre
+    MountDir: /shared
+    FsxLustreSettings:
+      StorageCapacity: 1200
+      PerUnitStorageThroughput: 125
+      DeploymentType: SCRATCH_2
+EOF
 ```
-{{% /notice %}}
+

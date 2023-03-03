@@ -10,7 +10,6 @@ pygmentsCodeFences = true
 hrefTargetBlank = true
 
 [params]
-editURL = "https://github.com/aws-samples/aws-hpc-tutorials/tree/master/content/"
 themeVariant = "mine"
 showVisitedLinks = true
 description = "AWS HPC Workshops"

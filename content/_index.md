@@ -4,7 +4,7 @@ date: 2023-03-03T14:41:06Z
 draft: false
 ---
 
-# OpenFoam on ParallelCluster Workshop
+# [DRAFT] OpenFoam on ParallelCluster Workshop
 
 Welcome to the **OpenFoam on ParallelCluster Workshop**. We are excited to meet you, and look forward to answering your questions!
 
