@@ -4,9 +4,9 @@ date: 2022-09-29T14:41:06Z
 draft: false
 ---
 
-# SC22 Tutorial
+# OpenFoam on ParallelCluster Tutorial
 
-Welcome to the **Best Practices for HPC in the Cloud** tutorial at SC22 that will be delivered on {{< param tutorialDate >}} . We are excited to meet you, and look forward to answering your questions!
+Welcome to the **OpenFoam on ParallelCluster Tutorial**. We are excited to meet you, and look forward to answering your questions!
 The website will be maintained after SC22, labs will also be available on https://www.hpcworkshops.com within a few weeks after the conference.
 
 {{% notice tip %}}
