@@ -63,10 +63,16 @@ cd motorBikeDemo-72
 
 You'll see we have a complete OpenFOAM case. The test-case is a modified version of the standard OpenFOAM motorbike tutorial which will create a mesh of approximately 4M cells.
 
-In order to send the job from the head node to the cluster, we need to create a submission script:
+In order to send the job from the head node to the cluster, we need to create a submission script.
+
+Open your preferred text editor and create a script file, name it: **submit.sh**
 
 ```bash
-cat > submit.sh << EOF
+vi submit.sh
+```
+Cut&Paste the content from the section here below:
+
+```bash
 #!/bin/bash
 #SBATCH --job-name=foam-72
 #SBATCH --ntasks=72
@@ -75,7 +81,7 @@ cat > submit.sh << EOF
 #SBATCH --constraint=c5n.18xlarge
 
 module load openmpi
-source /fsx/apps/OpenFOAM/OpenFOAM-v2012/etc/bashrc
+source /fsx/apps/openfoam/OpenFOAM-v2012/etc/bashrc
 
 cp $FOAM_TUTORIALS/resources/geometry/motorBike.obj.gz constant/triSurface/
 surfaceFeatureExtract  > ./log/surfaceFeatureExtract.log 2>&1
@@ -90,7 +96,6 @@ ls -d processor* | xargs -i rm -rf ./{}/0
 ls -d processor* | xargs -i cp -r 0.orig ./{}/0
 mpirun -np $SLURM_NTASKS potentialFoam -parallel -noFunctionObjects -initialiseUBCs -decomposeParDict system/decomposeParDict.ptscotch > ./log/potentialFoam.log 2>&1s
 mpirun -np $SLURM_NTASKS simpleFoam -parallel  -decomposeParDict system/decomposeParDict.ptscotch > ./log/simpleFoam.log 2>&1
-EOF
 ```
 
 Now that the script is ready, you can launch your job with the **sbatch** command:
