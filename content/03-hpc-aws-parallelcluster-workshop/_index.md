@@ -8,9 +8,7 @@ tags: ["HPC", "Overview"]
 In this lab, you are introduced to [AWS ParallelCluster](https://aws.amazon.com/hpc/parallelcluster/) and will run OpenFoAM on the HPC Cluster on AWS. This workshop includes the following steps:
 
 - Install and configure ParallelCluster on your AWS Cloud9 IDE.
-- Install and connect to PCluster GUI (optional).
 - Create your HPC cluster in AWS.
 - Connect to your new cluster via SSH from Cloud9.
 - Submit a OpenFoam job and check what is happening in the background.
-- Visualize the results of the OpenFoam job.
 

@@ -1,5 +1,5 @@
 +++
-title = "c. Set up AWS ParallelCluster foundation"
+title = "Set up AWS ParallelCluster foundation"
 date = 2022-04-10T10:46:30-04:00
 weight = 30
 tags = ["tutorial", "ParallelCluster", "initialize"]
@@ -72,7 +72,7 @@ Scheduling:
           DisableSimultaneousMultithreading: true
       Networking:
         SubnetIds:
-          - subnet-f6558992
+          - ${SUBNET_ID}
         PlacementGroup:
           Enabled: true
       ComputeSettings:

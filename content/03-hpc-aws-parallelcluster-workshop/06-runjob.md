@@ -1,5 +1,5 @@
 +++
-title = "d. Install and run OpenFoam"
+title = "Install and run OpenFoam"
 date = 2022-04-10T10:46:30-04:00
 weight = 60
 tags = ["tutorial", "create", "ParallelCluster"]
@@ -57,8 +57,8 @@ tar -xvf openfoam-build.tar.gz
 Let's untar the benchmark we have downloaded before:
 ```bash
 cd /fsx/apps
-tar -xf motorBikeDemo.tgz
-cd motorBikeDemo
+tar -xf motorBikeDemo-72.tgz
+cd motorBikeDemo-72
 ```
 
 You'll see we have a complete OpenFOAM case. The test-case is a modified version of the standard OpenFOAM motorbike tutorial which will create a mesh of approximately 4M cells.
@@ -68,8 +68,8 @@ In order to send the job from the head node to the cluster, we need to create a 
 ```bash
 cat > submit.sh << EOF
 #!/bin/bash
-#SBATCH --job-name=foam-108
-#SBATCH --ntasks=108
+#SBATCH --job-name=foam-72
+#SBATCH --ntasks=72
 #SBATCH --output=%x_%j.out
 #SBATCH --partition=queue0
 #SBATCH --constraint=c5n.18xlarge

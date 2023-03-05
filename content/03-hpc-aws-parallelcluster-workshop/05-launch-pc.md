@@ -1,5 +1,5 @@
 +++
-title = "c. Build an HPC Cluster"
+title = "Build an HPC Cluster"
 date = 2022-04-10T10:46:30-04:00
 weight = 50
 tags = ["tutorial", "create", "ParallelCluster"]
@@ -16,7 +16,7 @@ pcluster create-cluster --region ${REGION} --cluster-name hpc-cluster-lab --supp
 The cluster creation process will take ~20 minutes. Below is the expected output.
 
 ```console
-TeamRole:~/environment $ pcluster create-cluster --region ${AWS_REGION} --cluster-name hpc-cluster-lab --suppress-validators ALL --cluster-configuration my-cluster-config.yaml
+TeamRole:~/environment $ pcluster create-cluster --region ${REGION} --cluster-name hpc-cluster-lab --suppress-validators ALL --cluster-configuration my-cluster-config.yaml
 {
   "cluster": {
     "clusterName": "hpc-cluster-lab",
