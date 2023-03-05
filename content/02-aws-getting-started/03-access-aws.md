@@ -33,6 +33,5 @@ Click **AWS Console Login**, then on the following popup click on the link **Ope
 
 ![Event Engine AWS Console](</images/sc22/event-engine-aws-console.png>)
 
-{{% notice warning %}}
+
 Do not forget to run in the EU west 1 AWS Region (eu-west-1). We can connect into your account if you need help during the tutorial.
-{{% /notice %}}
