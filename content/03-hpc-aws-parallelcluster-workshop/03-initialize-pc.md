@@ -61,7 +61,7 @@ Scheduling:
       ComputeResources:
         - Name: queue0-compute-resource-0
           Instances:
-            - InstanceType: c5n.large
+            - InstanceType: c5n.18xlarge
           MinCount: 0
           MaxCount: 2
           DisableSimultaneousMultithreading: true
@@ -81,10 +81,9 @@ Image:
 SharedStorage:
   - Name: FsxLustre0
     StorageType: FsxLustre
-    MountDir: /shared
+    MountDir: /fsx
     FsxLustreSettings:
       StorageCapacity: 1200
-      PerUnitStorageThroughput: 125
       DeploymentType: SCRATCH_2
 EOF
 ```
