@@ -53,6 +53,11 @@ HeadNode:
       VolumeType: gp3
       Size: 50
       Encrypted: true
+  Iam:
+    AdditionalIamPolicies:
+      - Policy: arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+  Dcv:
+    Enabled: true
 Scheduling:
   Scheduler: slurm
   SlurmQueues:
@@ -67,7 +72,7 @@ Scheduling:
           DisableSimultaneousMultithreading: true
       Networking:
         SubnetIds:
-          - ${SUBNET_ID}
+          - subnet-f6558992
         PlacementGroup:
           Enabled: true
       ComputeSettings:
@@ -75,7 +80,7 @@ Scheduling:
           RootVolume:
             VolumeType: gp3
   SlurmSettings: {}
-Region: eu-west-1
+Region: $REGION
 Image:
   Os: alinux2
 SharedStorage:
