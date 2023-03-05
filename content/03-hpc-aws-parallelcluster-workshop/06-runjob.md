@@ -47,6 +47,8 @@ wget https://ee-assets-prod-eu-west-1.s3.eu-west-1.amazonaws.com/modules/216f0fd
 
 wget https://ee-assets-prod-eu-west-1.s3.eu-west-1.amazonaws.com/modules/216f0fd1f95f4e849947933f8fb1e5ce/v1/motorBikeDemo.tgz
 
+wget https://ee-assets-prod-eu-west-1.s3.eu-west-1.amazonaws.com/modules/216f0fd1f95f4e849947933f8fb1e5ce/v1/motorBikeDemo-72.tgz
+
 tar -xvf openfoam-build.tar.gz
 ```
 
