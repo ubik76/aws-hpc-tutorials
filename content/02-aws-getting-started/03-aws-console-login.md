@@ -6,9 +6,7 @@ weight = 60
 tags = ["tutorial", "aws console", "ec2"]
 +++
 
-{{% notice warning %}}
-Skip this step if you are doing the labs during an AWS event.
-{{% /notice %}}
+**Skip this step if you are doing the labs during an AWS event.**
 
 
 Depending on your workshop, you may access the AWS Management Console through direct sign-in ([here](https://signin.aws.amazon.com/console)) or as directed by your trainer. To sign in, enter your AWS Account ID or alias, IAM user name, and password that was provided to you for this lab.
