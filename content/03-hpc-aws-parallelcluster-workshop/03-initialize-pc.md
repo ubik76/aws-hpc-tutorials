@@ -10,8 +10,7 @@ For this workshop, you will create a custom configuration file to include the HP
 
 In this section, you will set up the foundation (for example network, scheduler, ...) required to build the ParallelCluster config file in the next section.
 
-{{% notice info %}}Don't skip these steps, it is important to follow each step sequentially, copy paste and run these commands
-{{% /notice %}}
+Don't skip these steps, it is important to follow each step sequentially, copy paste and run these commands
 
 Retrieve network information and set environment variables. In these steps you will also be writing these environment variables into a file in your working directory which can be sourced and set again in case you logout of the session.
 

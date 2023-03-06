@@ -23,9 +23,7 @@ AWS Cloud9 also includes the latest version of AWS CLI, but it is always a good 
 
 The [AWS CLI](https://aws.amazon.com/cli/) allows you to manage services using the command line and control services through scripts. Many users choose to conduct some level of automation using the AWS CLI.
 
-{{% notice tip %}}
-Use the copy button in each of the following code samples to quickly copy the command to your clipboard.
-{{% /notice %}}
+Use the **copy button** in each of the following code samples to quickly copy the command to your clipboard.
 
 In your AWS Cloud9 terminal window paste the following commands
 

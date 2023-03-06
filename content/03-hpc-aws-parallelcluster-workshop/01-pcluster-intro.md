@@ -29,8 +29,8 @@ AWS ParallelCluster supports a wide variety of operating systems and batch sched
 ![pcluster-arch](/images/hpc-aws-parallelcluster-workshop/pc-how-it-works.png)
 
 
-{{% notice info %}} AWS ParallelCluster official documentation can be found [here](https://docs.aws.amazon.com/parallelcluster/). 
-{{% /notice %}}
+AWS ParallelCluster official documentation can be found [here](https://docs.aws.amazon.com/parallelcluster/). 
 
-{{% notice info %}} AWS ParallelCluster GitHub repository is [here](https://github.com/aws/aws-parallelcluster).
-{{% /notice %}}
+
+AWS ParallelCluster GitHub repository is [here](https://github.com/aws/aws-parallelcluster).
+

@@ -33,8 +33,6 @@ You can control the status of the cluster creation with the command:
 pcluster describe-cluster -n hpc-cluster-lab | grep clusterStatus
 ```
 
-{{% notice tip %}}
-There can be only one cluster of a given name at any time on your account.
-{{% /notice %}}
+Please note that there can be only one cluster of a given name at any time on your account.
 
 In the next section we will connect to the cluster and we will install the HPC application.
