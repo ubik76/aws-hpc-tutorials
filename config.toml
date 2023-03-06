@@ -10,6 +10,7 @@ pygmentsCodeFences = true
 hrefTargetBlank = true
 
 [params]
+editURL = "https://github.com/aws-samples/aws-hpc-tutorials/tree/master/content/"
 themeVariant = "mine"
 showVisitedLinks = true
 description = "AWS HPC Workshops"
@@ -17,8 +18,6 @@ disableSearch = false
 disableAssetsBusting = false
 disableLanguageSwitchingButton = true
 disableShortcutsTitle = false
-tutorialDate = "November 14th 2022"
-contact = "[sc22tutorial@amazon.com](mailto:sc22tutorial@amazon.com)"
 
 
 [outputs]
@@ -44,8 +43,27 @@ page = [ "HTML", "AMP"]
     privacyEnhanced = false
 
 [[menu.shortcuts]]
+name = "<i class='fab fa-github'></i> Github"
+url = "https://github.com/aws-samples/aws-hpc-tutorials"
+weight = 10
+
+[[menu.shortcuts]]
 name = "<i class='fas fa-bookmark'></i> AWS - HPC"
 url = "https://aws.amazon.com/hpc/"
 weight = 10
 
+[[menu.shortcuts]]
+name = "<i class='fas fa-users'></i> Authors"
+url = "/authors.html"
+weight = 20
 
+[[menu.shortcuts]]
+name = "<i class='fas fa-envelope'></i> Feedback / Questions?"
+url = "mailto:aws-hpc-workshops@amazon.com"
+weight = 30
+
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-tags'></i> Tags"
+url = "/tags"
+weight = 40
