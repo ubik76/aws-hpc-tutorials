@@ -32,10 +32,7 @@ squeue
 OpenFOAM is distributed with the GNU GPL v3 Open Source license. You can download and compile OpenFoam on AWS, for exemple using the instructions provided [here](https://github.com/aws-samples/awsome-hpc/blob/main/scripts/install/openfoam_install.sh)
 
 For the scope of this workshop, we will download a precompiled version of OpenFoam.
-
-{{% notice warning %}}
 Please note that this version is provided only for the scope of this workshop. Don't use it in a production environment.
-{{% /notice %}}
 
 The following commands will create the **apps** directory in our Lustre shared directory and then it will download a tar.gz containing OpenFoam. Then we will download the **motorbike** benchmark and finally we will unzip the tar file.
 
