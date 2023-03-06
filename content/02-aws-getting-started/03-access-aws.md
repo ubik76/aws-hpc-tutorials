@@ -1,9 +1,9 @@
----
-title: "a. Accessing Your Lab Account"
-date: 2019-09-18T10:50:17-04:00
-draft: false
-weight: 50
----
++++
+title = "a. Accessing Your Lab Account"
+date = 2019-09-18T10:50:17-04:00
+draft = false
+weight = 50
++++
 
 {{% notice warning %}}
 Accounts are only accessible for the duration of the event. To continue using AWS after the event, [create an AWS Account](<https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/>).
