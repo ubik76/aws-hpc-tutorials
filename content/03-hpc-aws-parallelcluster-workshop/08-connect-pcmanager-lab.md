@@ -6,7 +6,7 @@ tags = ["tutorial", "initialize", "ParallelCluster"]
 +++
 
 {{%notice note%}}
-If you are participating in this workshop as part of ISC22, then *PCluster Manager* will already be deployed for you, and you can continue with the steps below. If not, you will first have to deploy PCluster Manager from [AWS CloudFormation](https://github.com/aws-samples/pcluster-manager) to your account.
+If you are participating in this workshop as part of ISC22, then *PCluster Manager* will already be deployed for you. 
 {{% /notice %}}
 
 Once your PCluster Manager CloudFormation stack has been deployed, you can follow these steps to connect to it:
@@ -15,7 +15,7 @@ Once your PCluster Manager CloudFormation stack has been deployed, you can follo
 
 2. Once **CloudFormation** appears in your search results, click on it to open the CloudFormation Management Console.
 
-3. You'll see a stack named **mod-[random hash]**. Click on that stack, then click on the **Outputs** tab, and finally click on the **PclusterManagerUrl** to connect to PCluster Manager.
+3. You'll see two stacks named **mod-[random hash]**. Click on the second stack, then click on the **Outputs** tab, and finally click on the **PclusterManagerUrl** to connect to PCluster Manager.
 
 ![PCluster Manager Deployed](/images/isc22/pcluster-deployed.png)
 
@@ -24,7 +24,7 @@ Once your PCluster Manager CloudFormation stack has been deployed, you can follo
 ![Signup Screen](/images/isc22/sign-up.png)
 
 5. Enter your email and password that meets the requirements and click **Sign Up**:
-(We are not collecting your email, it will be deleted togheter with the AWS account that you are using for this lab).
+(We are not collecting your email, it will be deleted together with the AWS account that you are using for this lab).
 
 
 ![Signup Screen](/images/isc22/signup-password.png)
