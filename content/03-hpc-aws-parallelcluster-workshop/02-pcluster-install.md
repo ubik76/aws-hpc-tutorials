@@ -16,7 +16,7 @@ This lab requires an AWS Cloud9 IDE. If you do not have an AWS Cloud9 IDE set up
 Install AWS ParallelCluster
 
 ```bash
-python3 -m pip install "aws-parallelcluster" --upgrade --user
+pip3 install aws-parallelcluster==3.6.0 -U --user
 ```
 
 You can check the ParallelCluster installation completed successfully by running: 
@@ -28,7 +28,7 @@ pcluster version
 The output should be:
 ```console
 {
-  "version": "3.5.0"
+  "version": "3.6.0"
 }
 ```
 
